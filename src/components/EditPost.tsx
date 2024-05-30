@@ -48,7 +48,12 @@ export default function EditPost() {
   };
 
   return (
-    <Box>
+    <Box sx={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column'
+    }}>
       <Typography variant="h4">Edit Post</Typography>
       <Form formData={formData} onSubmit={updatePost} onFormChange={handleFormChange} />
     </Box>

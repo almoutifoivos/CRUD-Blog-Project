@@ -19,7 +19,7 @@ export default function DeletePost() {
     setPosts(updatedPosts);
     localStorage.setItem("posts", JSON.stringify(updatedPosts));
     console.log(`Deleted post with id: ${id}`);
-    navigate('/');
+    navigate("/");
   };
 
   const handleDelete = () => {
@@ -31,12 +31,21 @@ export default function DeletePost() {
   };
 
   const handleReturn = () => {
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <Box>
-      <Typography variant="h4">Are you sure you want to delete the post?</Typography>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <Typography variant="h4">
+        Are you sure you want to delete the post?
+      </Typography>
       <Button onClick={handleDelete}>Delete</Button>
       <Button onClick={handleReturn}>Return</Button>
     </Box>

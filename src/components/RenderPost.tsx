@@ -15,7 +15,6 @@ export default function RenderPost() {
     });
   };
 
-  // Check if state is available
   if (!location.state) {
     return (
       <Box>
